@@ -1,9 +1,9 @@
-if !exists('g:clojure_foldwords')
-  let g:clojure_foldwords = "def,ns"
+if !exists('g:hy_foldwords')
+  let g:hy_foldwords = "defn,defclass"
 endif
 
 function! CompareLispword(line)
-  let fwc = split(g:clojure_foldwords,",")
+  let fwc = split(g:hy_foldwords,",")
 
   for fw in fwc
     if a:line =~ '^\s*('.fw.'.*'
@@ -14,7 +14,7 @@ function! CompareLispword(line)
   endfor
 endfunction
 
-function! GetClojureFold()
+function! GetHyFold()
       if CompareLispword(getline(v:lnum))
         return ">1"
       elseif getline(v:lnum) =~ '^\s*$'
@@ -40,14 +40,14 @@ function! GetClojureFold()
       endif
 endfunction
 
-function! StartClojureFolding()
-  setlocal foldexpr=GetClojureFold()
+function! StartHyFolding()
+  setlocal foldexpr=GetHyFold()
   setlocal foldmethod=expr
 endfunction
 
-augroup ft_clojure
+augroup ft_hy
     au!
-    au BufNewFile,BufRead *.clj set filetype=clojure
-    au FileType clojure silent! call StartClojureFolding()
-    au FileType clojure setlocal report=100000
+    au BufNewFile,BufRead *.hy set filetype=hy
+    au FileType hy silent! call StartHyFolding()
+    au FileType hy setlocal report=100000
 augroup END

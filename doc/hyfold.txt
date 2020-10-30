@@ -1,0 +1,45 @@
+*cljfold.txt*          Provides semantic folding for Clojure files within Vim.
+
+==============================================================================
+Author:  Ati Sharma <ati dot sharma at diplomail dot ch>       *hyfold-author*
+License: GPL v2
+
+==============================================================================
+INTRODUCTION                                                   *hyfold-intro*
+
+This plugin provides folding for Hy source code in vim.
+It is based on code-blocks as defined in the 'g:hy_foldwords' variable.
+
+It is a fork of cljfold.vim.
+
+All folding happens at the top-level.
+
+Folding happens by default in *.hy files.
+
+==============================================================================
+CONFIGURATION                                                 *hy-config*
+
+By default, folding will happen on code-blocks starting with "defn" and
+"defclass". This behaviour can be changed in your vimrc file by setting
+g:hy_foldwords to a comma-separated string of words to be included.
+
+==============================================================================
+LICENSE                                                           *hy-license*
+
+GPL v2 @ http://www.gnu.org/licenses/gpl-2.0.html
+
+==============================================================================
+CONTRIBUTING                                                 *hy-contributing*
+
+Source code and bugs can be found at:
+
+https://github.com/atisharma/vim-hyfold
+
+==============================================================================
+CREDITS                                                           *hy-credits*
+
+This is a fork of cljfold.vim by Greg Berenfield.
+Most of that code was gratuitously ripped from code by Steve Losh and Meikel
+Brandmeyer from VimClojure and Steve's dotfiles.
+
+==============================================================================
