@@ -1,4 +1,4 @@
-#vim-hyfold#
+# vim-hyfold
 
 This plugin is for automagic folding of &#x03BB; Hy code based on 'foldwords'
 that are the start of code-blocks.
