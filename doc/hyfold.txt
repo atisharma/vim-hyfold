@@ -1,0 +1,43 @@
+*hyfold.txt*       Semantic folding for Hy files in Vim
+
+Author:  Ati Sharma <ati@agalmic.ltd>                     *hyfold-author*
+License: GPL v2
+
+==============================================================================
+INTRODUCTION                          *hyfold-intro*
+
+vim-hyfold provides folding for Hy source code in Vim.
+It folds on code-blocks as defined by the `g:hy_foldwords` variable.
+
+Folding happens at the top level by default in *.hy files.
+
+==============================================================================
+CONFIGURATION                        *hyfold-config*
+
+By default, folding occurs on code-blocks starting with `defn`, `defclass`,
+`defmacro`, `defreader`, `defmethod`, `deftest`, `defmain`, `defn+`, `fn+`,
+`defmacro!`, `with-decorator`, `with`, `try`, and `match`.
+
+Override in your vimrc:
+>
+  let g:hy_foldwords = "defn,defclass"
+<
+
+==============================================================================
+LICENSE                              *hyfold-license*
+
+GPL v2 — see https://www.gnu.org/licenses/gpl-2.0.html
+
+==============================================================================
+CONTRIBUTING                         *hyfold-contributing*
+
+Source and issues: https://github.com/atisharma/vim-hyfold
+
+==============================================================================
+CREDITS                              *hyfold-credits*
+
+Forked from cljfold.vim by Greg Berenfield.
+That code drew from Steve Losh and Meikel Brandmeyer (VimClojure).
+
+==============================================================================
+ vim:tw=78:ts=8:ft=help:norl:
